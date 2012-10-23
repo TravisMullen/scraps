@@ -1,0 +1,544 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body { 
+	width: 810px;
+	font: 15px/18px Helvetica, Arial, sans-serif;
+}
+span,
+div,
+p {
+	font-family: Helvetica, Arial, sans-serif;
+}
+.ir,
+#ta-clients li,
+#ta-leadership-members li {
+	text-align: left;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+h2 {
+	/*font: 64px/64px 'OSPDIN',Arial,sans-serif;*/
+	font: 64px/64px DINWeb-CondMedium, OSPDIN, sans-serif;
+	text-transform: uppercase;
+	color: #e6402c;
+	font-weight: normal;
+}
+h3 {
+	/*font: 24px/24px 'OSPDIN',Arial,sans-serif;*/
+	font: 24px/24px DINWeb-CondMedium, OSPDIN, sans-serif;
+	color: #e6402c;
+}
+sup {
+	vertical-align: baseline;
+	font-size: 36px;
+	position: relative;
+	top: -20px;
+	_top: -25px;
+}
+.copy {
+	font-size: 11px;
+	line-height: 18px;
+}
+.clear {
+	clear: both;
+	line-height: 1px;
+	height: 1px;
+	background: transparent;
+}
+#ta-content {
+	background-color: transparent;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	min-height: 600px;
+}
+#who-we-are #ta-content {
+	background-image: url(../images/BG_WhoWeAre.jpg);
+	background-repeat: repeat-y;
+}
+#how-we-think #ta-content {
+	background-image: url(../images/BG_HowWeThink.jpg);	
+}
+#how-we-think .funnel {
+	background-image: url(../images/how-we-think-funnel.jpg) !important;
+	background-position: 0 -181px;
+	margin-top: 0;
+	padding-top: 25px;
+	_padding-top: 35px;
+	margin-bottom: 50px;
+
+}
+#how-we-think .funnel h2 {
+	font-size: 48px;
+	line-height: 52px;
+}
+#how-we-think .funnel p {
+	width: 430px;
+}
+#ta-services #ta-content {
+	background-image: url(../images/BG_Services.jpg);
+	padding-bottom: 30px;
+	background-repeat: repeat-y;
+}
+#ta-careers #ta-content {
+	background-image: url(../images/BG_Careers.jpg);
+}
+#ta-header,
+#ta-content h2,
+#ta-content h3,
+#ta-content p,
+#ta-content ul,
+#ta-leader-details,
+#ta-nav  {
+	width: 670px;
+	_width: 810px;
+	padding: 5px 70px;
+}
+#ta-header {
+	background: #383838 url(../images/trueaction-logo.png) no-repeat 663px 20px;
+	padding: 45px 70px;
+}
+#ta-header a,
+#ta-careers #ta-content .careers-list ul .job-desc a {
+	color: #e6402c;
+	text-decoration: none;
+}
+#ta-content h2 {
+	clear: left;
+	padding-top: 45px;
+}
+#ta-content h2.bottom {
+	clear: left;
+	margin-top: 45px;
+	padding-top: 0;
+}
+#ta-header p {
+	color: #fff;
+	/*font-weight: bold;*/
+}
+
+
+/* who we are */
+
+/* #ta-our-ecosystem
+______________________ */
+#ta-our-ecosystem {
+	width: 688px;
+	height: 420px;
+	background: transparent url(../images/img-our-ecosystem-c.png) no-repeat 0 -142px;
+	margin: 25px 0 45px 60px;
+}
+
+/* #ta-leadership
+______________________ */
+#ta-leadership {
+	float: left;
+
+}
+#ta-leadership h3 {
+	_margin-top:20px;
+	clear: left;
+}
+#ta-leadership-image {
+	margin-left: 70px;
+	height: 175px;
+	width: 175px;
+	background: transparent url(../images/ta-execs-large.jpg) no-repeat 0 0;
+	float: left;
+}
+.hendel #ta-leadership-image {
+	background-position: 0 0;
+}
+.fleishhacker #ta-leadership-image {
+	background-position: -178px 0;
+}
+.seabrook #ta-leadership-image {
+	background-position: -356px 0;
+}
+.sheldon #ta-leadership-image {
+	background-position: -534px 0;
+}
+.wilks #ta-leadership-image {
+	background-position: -712px 0;
+}
+.waterman #ta-leadership-image {
+	background-position: 0 -175px;
+}
+.turner #ta-leadership-image {
+	background-position: -178px -175px;
+}
+.duffie-fritz #ta-leadership-image {
+	background-position: -356px -175px;
+}
+.nagle #ta-leadership-image {
+	background-position: -534px -175px;
+}
+.sweet #ta-leadership-image {
+	background-position: -712px -175px;
+}
+.dobris #ta-leadership-image {
+	background: transparent url(../images/jan_175.jpg) no-repeat 0 0;
+}
+ul#ta-leadership-members {
+	float: left;
+	list-style: none;
+	width: 500px;
+	padding: 0;
+}
+
+#ta-leadership-members li {
+	float: left;
+	width: 78px;
+	height: 78px;
+	cursor: pointer; 
+	margin: 0 0 19px 22px;
+	/*margin: 0 0 19px 5px;*/
+	background-image: url(../images/ta-execs-small.jpg);
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+#ta-leadership-members li.active {
+	background-image: url(../images/ta-execs-small-overlay.jpg);
+}
+
+.dobris #ta-leadership-members li.active {
+	background: transparent url(../images/jan_78_over.jpg) no-repeat 0 0;
+}
+#hendel { background-position: 0 0; }
+#fleishhacker { background-position: -79px 0; }
+#seabrook { background-position: -158px 0; }
+#sheldon { background-position: -237px 0; }
+#wilks { background-position: -316px 0; }
+#waterman { background-position: 0 -78px; }
+#turner { background-position: -79px -78px; }
+#duffie-fritz { background-position: -158px -78px; }
+#nagle { background-position: -237px -78px; }
+#sweet { background-position: -316px -78px; }
+li#dobris { 
+	background: transparent url(../images/jan_78_up.jpg) no-repeat 0 0; 
+}
+#ta-leadership-members p {
+}
+#ta-leader-details {
+	-moz-column-count: 2;
+	-moz-column-gap: 60px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 60px;
+	column-count: 2;
+	column-gap: 60px;
+}
+#ta-leader-details p {
+	width: auto;
+	padding: 0 0 18px 0;
+}
+
+#ta-leader-details h4 {
+	display: none;
+}
+/* #ta-locations
+______________________ */
+#ta-locations {
+	clear: left;
+	position: relative;
+	width: 762px;
+	height: 351px;
+	background: transparent url(../images/img-locations.png) no-repeat 0 0;
+	margin: 25px 0 45px 45px;
+}
+#ta-locations div {
+	position: absolute;
+	color: #fff;
+	text-transform: uppercase;
+}
+#ta-locations .title {
+	display: block;
+	background-color: #383838;
+	line-height: 10px;
+	font-size: 10px;
+	font-weight: normal;
+	padding: 4px 7px;
+	cursor: pointer;
+}
+#ta-locations .title span {
+	display: none;
+}
+#ta-locations .details {
+	display: block;
+	background-color: #e6402c;
+	width: 160px;
+	z-index: 1000px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	padding: 7px 10px;
+}
+#ta-locations .details span {
+	display: block;
+	text-transform: none;
+	font-weight: normal;
+}
+#ta-locations .details span a {
+	color: #fff;
+	text-decoration: underline
+}
+#sfo {
+	top: 188px;
+	left: 143px;
+}
+#sfo.title {
+}
+#sfo.details {
+}
+#lax {
+	left: 159px;
+    top: 232px;
+}
+#lax.title {
+}
+#lax.details {
+}
+#nyc {
+	top: 188px;
+	left: 365px;
+}
+#nyc.title {
+}
+#nyc.details {
+}
+#phl {
+	top: 210px;
+	left: 349px;
+}
+#phl.title {
+}
+#phl.details {
+}
+#ldn { 
+    top: 122px;
+    left: 574px;
+}
+#ldn.title {
+	/*left: 574px;*/
+}
+#ldn.details {
+	/*left: 525px;*/
+}
+
+
+/* #ta-clients 
+______________________ */
+
+#ta-clients {
+	margin-top: 20px;
+	list-style: none;
+	height: 400px;
+	overflow: hidden;
+}
+#ta-clients li {
+	display: block;
+	width: 160px;
+	height: 140px;
+	float: left;
+	background-color: transparent;
+ 	background-repeat: no-repeat;
+ 	background-image: url(../images/ta-clients-sprite.png);
+}
+#tumi {
+	background-position: 0 0;
+}
+#aero {
+	background-position: -160px 0;
+}
+#trus {
+	background-position: -320px 0;
+}
+#sony {
+	background-position: -480px 0;
+}
+#pfarm {
+	background-position: 0 -140px;
+}
+#gnc {
+	background-position: -160px -140px;
+}
+#kraft {
+	background-position: -320px -140px;
+}
+#nfl {
+	background-position: -480px -140px;
+}
+#hasbro {
+	background-position: 0 -280px;
+}
+#levi {
+	background-position: -160px -280px;
+}
+#polo {
+	background-position: -320px -280px;
+}
+#psmt {
+	background-position: -480px -280px;
+}
+#hanes {
+	background-position: 0 -420px;
+}
+#scholastic {
+	background-position: -160px -420px;
+}
+#rsk {
+	background-position: -320px -420px;
+}
+#dsg {
+	background-position: -480px -420px;
+}
+#who-we-are br {
+	clear: left;
+}
+/* how we think */
+
+/* #ta-the-commerce-effect
+______________________ */
+#ta-the-commerce-effect {
+ 	background: url("../images/ta-how-we-think.png") no-repeat scroll -48px 0 transparent;
+    height: 478px;
+    margin: 25px 0 45px 68px;
+    width: 704px;
+}
+#how-we-think #ta-content h2 {
+	padding-top: 0;
+	margin-top: 45px;
+}
+/* services */
+
+#ta-nav {
+	color: #fff;
+	background-color: #e6402c;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+#ta-nav li {
+	white-space: nowrap;
+	list-style: none;
+	display: inline-block;
+	zoom:1;
+	_display: inline;
+	padding-right: 10px;
+	margin: 0 10px 10px 0;
+	border-right: #fff solid 1px;
+	font-size: 14px;
+	line-height: 18px;
+}
+#ta-nav li.clear {
+	clear: left;
+	border: none;
+}
+#ta-nav li a {
+	color: #fff;
+	text-decoration: none;
+}#ta-nav li a:hover {
+	color: #383838;
+}
+#ta-services #ta-content {
+	font-size: 12px;
+}
+#ta-services #ta-content ul {
+	list-style-image: url(../images/ta-bullet.png);
+	padding-bottom: 20px;
+}
+#ta-services #ta-content li {
+	margin-left: 15px;
+}
+#ta-services #ta-content h2,
+#ta-services #ta-content ul {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 70px;
+	margin-right: 70px;
+	_width: 670px;
+	/*border-bottom: 1px #ddd solid;*/
+	margin-bottom: 10px;
+}
+#ta-services #ta-content h2 {
+	_white-space: nowrap;
+}
+
+/* careers */
+#ta-careers #ta-content {
+}
+#ta-careers #ta-content ul{
+	list-style: none;
+}
+#ta-careers #ta-content .careers-list {
+	margin-top: 30px;
+}
+#ta-careers #ta-content .careers-list ul {
+	padding: 0;
+	_width:670px;
+}
+#ta-careers #ta-content .careers-list ul li {
+	zoom: 1;
+	display: inline-block;
+	_display: inline;
+	border-right: 1px solid #383838;
+	margin-right: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+#ta-careers #ta-content .careers-list ul .job-title {
+	color: #e6402c;
+	font-weight: bold;
+}
+#ta-careers #ta-content .careers-list ul .post-date {
+	border: none;
+}
+#ta-careers #ta-content .careers-list ul .job-desc {
+	border: none;
+	font-size: 12px;
+}
+a#view-careers {
+	float: left;
+	font-family: 11px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	padding: 10px 25px 10px 13px;
+	_padding-top: 8px;
+	color: #fff;
+	background: #e6402c url(../images/cta-arrow-l.png) no-repeat right 13px;
+}
+a#view-careers:hover {
+	background-color: #000;
+}
+.job-desc a {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+}
+.job-desc a:hover {
+	color: #000 !important;
+}
+
+
+
+
+
+
+
+
+

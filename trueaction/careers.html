@@ -1,0 +1,124 @@
+<!DOCTYPE>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+		<title>True Action - Careers</title>
+				<style type="text/css">	
+			@font-face {
+				font-family: DINWeb-CondMedium;
+				src: url("DINWeb-CondMedium.eot");
+			}
+
+			/* then for WOFF-capable browsers */
+			@font-face {
+				font-family: DINWeb-CondMedium;
+				src: url("DINWeb-CondMedium.woff") format("woff");
+			}
+		</style>    
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body id="ta-careers">
+		
+		<div id="ta-header">
+		
+			<h2>Careers</h2>		
+		
+			<p>We&#8217;re interested in finding superior talent that believes in our mission. If you&#8217;re ready to be part of a new Agency with eyes on the future and its feet on the ground, we&#8217;d love to talk to you. View the current openings at True Action, an eBay Inc. company. <!--Submit your r&eacute;sum&eacute; at <a href="mailto:careers@trueaction.com" title="careers@trueaction.com">careers@trueaction.com</a>--></p>
+			<a href="http://jobs.ebaycareers.com/careers/true-action-network-jobs" title="eBay Careers" target="_blank" id="view-careers">View Careers</a>
+			<br class="clear" />
+		</div><!-- #header -->
+		
+
+		
+		<div id="ta-content">
+			
+			<h2>Featured Positions</h2>
+			<ul class="careers-list">
+			
+				<li>
+					<ul>
+						<li class="job-title">Director Strategy &amp; Planning</li>
+						<li class="location">San Francisco, CA</li>
+						<li class="post-date">9/26/2012</li>
+						<li class="job-desc">The Director of Strategy &amp; Planning is both internally- and externally-focused on developing &amp; presenting strategic marketing solutions, including planning and ideation efforts, for both existing and potential True Action clients&#8230;<a href="http://jobs.ebaycareers.com/san-francisco/true-action-network/jobid2844095-director-strategy-%EF%B9%A0-planning-true-action-jobs" target="_blank">More</a></li>
+					</ul>
+				</li>
+			
+	
+				<li>
+					<ul>
+						<li class="job-title">Marketing Associate</li>
+						<li class="location">King of Prussia, PA</li>
+						<li class="post-date">09/04/2012</li>
+						<li class="job-desc">Develop, implement &amp; manage Affiliate Marketing strategies including recruitment, retention, activation & acquisition; data feed distribution; site auditing & communication campaigns. Provide complete management of Paid Search campaigns against defined success metrics; responsible for planning, developing keyword lists and text creative, implementation, optimization, testing and performance analysis&#8230;<a href="http://jobs.ebaycareers.com/new-york-state/true-action-network/jobid2860895-associate-creative-director-true-action-jobs" target="_blank">More</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li class="job-title">Copywriter</li>
+						<li class="location">New York, NY</li>
+						<li class="post-date">10/02/2012</li>
+						<li class="job-desc">Write compelling copy for a variety of products and services that clearly communicates the desired message with a brand-appropriate tone. Candidates should have an ability to write in a variety of styles including short and long form &#8211; as well as marketing and utility-based messaging&#8230;<a href="http://jobs.ebaycareers.com/king-of-prussia/true-action-network/jobid2240047-sr-copywriter-%28true-action%29-jobs" target="_blank">More</a></li>
+					</ul>
+				</li>
+			
+		</ul>	
+						
+		</div><!-- #ta-content -->
+		
+			
+		<div id="fb-root"></div>
+        <script type="text/javascript">
+        
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=243981049041025";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		
+		            var fbAsyncInit = function() {
+
+                FB.init({
+                    appId  : '243981049041025',
+                    status : true, // check login status
+                    cookie : true, // enable cookies to allow the server to access the session
+                    xfbml  : true  // parse XFBML
+                });
+
+                FB.Canvas.setAutoGrow();
+                
+                FB.Event.subscribe('edge.create', function(response) {
+                });
+
+                FB.Event.subscribe('edge.remove', function(response) {
+                });
+            };
+                         
+            $("#ta-content").bind('click', function(){ 
+            	var position = $(this).position();
+    			$('#ta-content').scrollTop(position.top+100);
+			});
+    		$(document).ready( function () {
+    		//start JS here 
+    			$('#ebay-posts').load('http://jobs.ebaycareers.com/careers/true-action-network-jobs #SearchResultsConteiner');
+            });
+        </script>
+		<script type="text/javascript">
+		
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29020665-1']);
+		_gaq.push(['_setDomainName', 'tandev.net']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		
+		</script>
+		
+</body>
+</html>
