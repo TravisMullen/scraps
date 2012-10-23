@@ -1,5 +1,7 @@
 /*
 
+THIS REQUIRES JQUERY!
+
 use for https://www.facebook.com/GevaliaCoffee/app_416000975120849
 this JS drive the core functionality for the application
 
