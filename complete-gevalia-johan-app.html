@@ -1,0 +1,267 @@
+<html xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+		<title>Johan - FIKA</title>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+		<style type="text/css">
+			body, html { width: 520px; /*min-height: 728px;*/ padding:0px; margin:0px; /*background-color: #40251A; overflow-x: hidden;*/ }
+			body.splash { overflow: hidden; }
+			
+			#intro-message {
+				display: none;
+				margin: 0;
+				padding: 0;
+				width: 520px;
+				height: 898px;
+				background: transparent url(images/fika-background-splash.jpg) no-repeat 0 -1px;
+			}
+			#intro-message .ir {
+				display: block;
+				height: 140px;
+				width: 520px;
+				text-indent: -9999px;
+				overflow: hidden;
+			}
+			#fb-like-gate {
+				position: relative;
+				left: 236px;
+				width: 54px;
+				overflow: hidden;
+			}
+			#main-content {
+				display: none;
+				margin: 0 auto;
+				width: 520px;
+				/*min-height: 1584px;*/
+				background: #40251A url(images/fika-background-main.jpg) no-repeat -1px 0;
+			}
+			
+			#movie-shell {
+				display: block;
+				height: 420px;
+				margin-left: 22px;
+			}
+			
+			#video-object {
+				position: relative;
+				/*top: 200px;
+				left: 22px;*/
+				
+				border: #353534 solid 4px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				z-index: 10;
+			}
+			
+			#video-options {
+				display: block;
+				list-style: none;
+				position: relative;
+				/*top: 298px;
+				left: -21px;*/
+				width: 485px;
+				margin-left: 19px;
+				padding: 0;
+				height: 485px;
+			}
+			#video-options li {
+				display: block;
+				border: #353534 solid 4px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				float: left;
+				margin-left: 7px;
+				margin-bottom: 7px;
+				padding: 0;
+				background-color: #353534;
+			}
+			#video-options li a {
+				display: block;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				width: 145px;
+				height: 78px;
+			}
+			#video-options li a span {
+				display: block;
+				text-indent: -9999px;
+				overflow: hidden;
+				position: relative;
+				top: -60px;
+				left: 53px;
+				width: 36px;
+				height: 36px;
+				z-index: 10;
+			}
+			#video-options li a:hover span {
+				background: transparent url(images/play-button.png) no-repeat 0 0;
+			}
+			
+			
+			#video-options li img {
+				width: 145px;
+				border: 0;
+			}
+			
+			#fb-comment-box {
+				position: relative;
+				/*top: 865px;
+				left: 57px;*/
+				background-color: #fff;
+				margin-top: 20px;
+			}
+			#video-send {
+				/*height: 190px;*/
+				height: 230px;
+				z-index: 10000;
+			}
+			#video-send-button {
+				position: relative;
+				top: 22px;
+				left: 24px;
+			}
+			.inactive {
+				display: none;
+			}
+			#pagelet_app_runner iframe {
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="intro-message"><span class="ir">Johan wants to be more than just Facebook friends.</span><div class="fb-like" id="fb-like-gate" data-href="https://www.facebook.com/GevaliaCoffee" data-send="false" data-layout="default" data-width="350" data-show-faces="false"></div></div>
+	
+		<div id="main-content">
+			<div id="video-send"></div>
+			<div id="movie-shell">
+			<iframe id="video-object" width="470" height="295" src="https://www.youtube.com/embed/viPsC5rc1Fg?showinfo=0&showsearch=0&rel=0" frameborder="0" video-code="viPsC5rc1Fg" current-thumbnail="images/video1.png" allowfullscreen></iframe>
+			</div>
+			<ul id="video-options">
+				<li><a video-code="Vy-9TgIdqRk" href="http://www.youtube.com/watch?v=Vy-9TgIdqRk"><img src="images/video-blonde.png"  /><span>play</span></a></li>
+				<li><a video-code="mM826MfK0Sw" href="http://www.youtube.com/watch?v=mM826MfK0Sw"><img src="images/video-flower.png"  /><span>play</span></a></li>
+				<li><a video-code="Gob-MGMsp3A" href="http://www.youtube.com/watch?v=Gob-MGMsp3A"><img src="images/video3.png" /><span>play</span></a></li>
+				<li><a video-code="69F0cQ_A1oA" href="http://www.youtube.com/watch?v=69F0cQ_A1oA"><img src="images/video-curves.png"  /><span>play</span></a></li>
+				<li><a video-code="jHcC8gv7F6o" href="http://www.youtube.com/watch?v=jHcC8gv7F6o"><img src="images/video-office.png"  /><span>play</span></a></li>
+				
+			</ul>
+		<div id="fb-comment-box" class="fb-comments" data-href="https://www.facebook.com/GevaliaCoffee?sk=app_336750229691547"  data-num-posts="2" data-width="520"></div><!-- data-colorscheme="dark" -->
+			
+		</div><!-- main-content -->
+		<div id="fb-root"></div>
+        <script type="text/javascript">
+			var fanGate = true;
+        	var tURL = 'https://www.facebook.com/GevaliaCoffee';
+			
+        	function activeLike(speed) {
+        	
+				$("body").removeClass("splash");
+				$("#intro-message").fadeOut(speed);
+				$("#main-content").fadeIn(speed);
+				$('#video-send').html('<div class="fb-like" data-send="true" data-width="400" data-show-faces="false" data-layout="button_count" id="video-send-button" data-href="http://www.youtube.com/watch?v=viPsC5rc1Fg"></div>');
+				if(typeof(FB) !== 'undefined')
+					FB.XFBML.parse(document.getElementById('video-send'));
+			}
+
+			function inactiveLike(speed) {
+				$("body").addClass("splash");
+				$("#main-content").fadeOut(speed);
+				$("#intro-message").fadeIn(speed);
+			}
+			
+           $('#video-options li a').bind('click', function(){
+           		
+    			var videoId = $(this).attr('video-code');
+    			var videoThumb = $(this).children("img").attr('src');
+    			var videoURL = "https://www.youtube.com/embed/" + videoId +"?autoplay=1&showinfo=0&showsearch=0&rel=0";
+    			var videoSendURL = "http://www.youtube.com/watch?v=" + videoId;
+    			var videoIdActive = $("#video-object").attr('video-code');
+    			var videoThumbActive = $("#video-object").attr('current-thumbnail');
+    			
+				$("#video-object").fadeOut(200).attr("src",videoURL).attr("current-thumbnail",videoThumb).attr("video-code",videoId).fadeIn(500);
+				$(this).attr("video-code",videoIdActive);
+				$(this).children("span").fadeOut(100).delay(1200).fadeIn(800);
+				$(this).children("img").fadeOut(200).delay(200).attr("src",videoThumbActive).delay(1200).fadeIn(800);
+				$('#video-send').html('<div class="fb-like" data-send="true" data-width="400" data-show-faces="false" data-layout="button_count" id="video-send-button" data-href="' + videoSendURL + '"></div>');
+				//reinitialize FB widget after DOM change
+				if(typeof(FB) !== 'undefined')
+					FB.XFBML.parse(document.getElementById('video-send'));
+
+    			return false;
+			});
+			
+            var fbAsyncInit = function() {
+
+                FB.init({
+                    appId  : '336750229691547',
+                    status : true, // check login status
+                    cookie : true, // enable cookies to allow the server to access the session
+                    xfbml  : true  // parse XFBML
+                });
+
+                FB.Canvas.setAutoGrow();
+                
+                FB.Event.subscribe('edge.create', function(response) {
+                	if (fanGate) {
+                	activeLike(1000);
+                	}
+                });
+
+                FB.Event.subscribe('edge.remove', function(response) {
+                	//inactiveLike(3000);
+                });
+            };
+
+
+    		(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=336750229691547";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+    		$(document).ready( function () {
+			inactiveLike(3000);				/*var playlist = ";
+				$('#video-options').children("a").each(
+				    function(){
+				    	var thisCode = $(this).attr("video-code")
+				        playlist = playlist +  + ",";
+				        alert("playlist"+playlist);
+				    }
+				);*/
+            });
+        </script>
+		<script type="text/javascript">
+		
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29020665-1']);
+		_gaq.push(['_setDomainName', 'tandev.net']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		
+		</script>
+				<!--
+		Start of DoubleClick Floodlight Tag: Please do not remove
+		Activity name of this tag: Like_Gate
+		URL of the webpage where the tag is expected to be placed: http://www.facebook.com/GevaliaCoffee
+		This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+		Creation Date: 02/09/2012
+		-->
+		<script type="text/javascript">
+		var axel = Math.random() + "";
+		var a = axel * 10000000000000;
+		document.write('<iframe src="https://fls.doubleclick.net/activityi;src=3491780;type=geval197;cat=gev_gate;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+		</script>
+		<noscript>
+		<iframe src="https://fls.doubleclick.net/activityi;src=3491780;type=geval197;cat=gev_gate;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+		</noscript>
+		<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+	
+		</body>
+</html>
