@@ -1,0 +1,331 @@
+/* 
+ *
+ * 	1 Day Only Sale.
+ * 
+ * 	red						#ab000c
+ *	grey, background		#aaa
+ *	grey, border			#d4d4d4
+ *	gold					#faa440
+ * --------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html { overflow-y: scroll; }
+body { 
+	font: 12px/18px 'Century Gothic', 'Apple Gothic', Helvetica, sans-serif;
+	color: #ab000c;
+	background-color: #aaa;
+}
+.replace-text { 
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+#header,
+#content,
+#footer {
+	width: 677px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0;
+}
+h1, 
+h2 {
+	height: 18px;
+	width: 100px;
+}
+#header {
+	height: 261px;
+	background: #ab000c url(greatgifts-header-monday.gif) no-repeat 0 0;
+}
+body.sunday #header {
+	height: 261px;
+	background: #ab000c url(greatgifts-header-sunday.gif) no-repeat 0 0;
+}
+
+#header a#shop {
+	display: block;
+	visibility: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	height: 45px;
+	width: 499px;
+}
+
+/* hosted partner logos */
+body.ace #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/ace.gif) no-repeat 0 0;
+}
+body.aero #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/aero.gif) no-repeat 0 0;
+}
+body.babyu #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/babyU.gif) no-repeat 0 0;
+}
+body.bam #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/BAM.gif) no-repeat 0 0;
+}
+body.bbw #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/BBW.gif) no-repeat 0 0;
+}
+body.cbk #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/christopherBank.gif) no-repeat 0 0;
+}
+body.cjb #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/CJbanks.gif) no-repeat 0 0;
+}
+body.cku #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/CKunderwear.gif) no-repeat 0 0;
+}
+body.cpwm #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/worldMarket.gif) no-repeat 0 0;
+}
+body.deb #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/DEB.gif) no-repeat 0 0;
+}
+body.ecko #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/ecko.gif) no-repeat 0 0;
+}
+body.etoys #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/eToys.gif) no-repeat 0 0;
+}
+body.fao #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/FAO.gif) no-repeat 0 0;
+}
+body.flav #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/flavia.gif) no-repeat 0 0;
+}
+body.gnc #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/GNC.gif) no-repeat 0 0;
+}
+body.irbt #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/iRobot.gif) no-repeat 0 0;
+}
+body.kip #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/kipling.gif) no-repeat 0 0;
+}
+body.maur #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/maurices_cp.jpg) no-repeat 0 0;
+}
+body.mlb #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/MLB.gif) no-repeat 0 0;
+}
+body.nascar #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/Nascar.gif) no-repeat 0 0;
+}
+body.nau #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/nautica.gif) no-repeat 0 0;
+}
+body.nfl #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/NFL.gif) no-repeat 0 0;
+}
+body.nhl #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/NHL.gif) no-repeat 0 0;
+}
+body.qpbs #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/PBS.gif) no-repeat 0 0;
+}
+body.psaero #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/PSaero.gif) no-repeat 0 0;
+}
+body.rckp #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/rockport.gif) no-repeat 0 0;
+}
+body.rsk #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/radioShack.gif) no-repeat 0 0;
+}
+body.spdo #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/speedo.gif) no-repeat 0 0;
+}
+body.tsa #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/TSA.gif) no-repeat 0 0;
+}
+body.wil #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/wilsons.gif) no-repeat 0 0;
+}
+body.zales #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/zales.gif) no-repeat 0 0;
+}
+body.zgor #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/zgor.gif) no-repeat 0 0;
+}
+
+/* non-hosted partner logos */
+body.childrensplace #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/childrensPlace_cp.gif) no-repeat 0 0;
+}
+body.cwdkids #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/CWDkids_cp.gif) no-repeat 0 0;
+}
+body.hearst #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/hearst_cp.jpg) no-repeat 0 0;
+}
+body.smart-bargain #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/smartBargains_cp.gif) no-repeat 0 0;
+}
+body.french-toast #header a#shop {
+	visibility: visible;
+	background: #fff url(logos/frenchToast_cp.gif) no-repeat 0 0;
+}
+
+
+#remaining-time {
+	display: block;
+	height: 50px;
+	width: 136px;
+	background-image: url(greatgifts-sprite-time.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	position: relative;
+	top: 60px;
+	left: 530px;
+	z-index: 9999;
+}
+.twelve {
+	background-position: 0 0;
+}
+.eight {
+	background-position: 0 -50px;
+}
+.four {
+	background-position: 0 -100px;
+}
+.less {
+	background-position: 0 -150px;
+}
+#content {
+	list-style: none;
+	width: 677px;
+	background: #fff url(greatgifts-partners-sprite.gif) no-repeat 0 0;
+	overflow: hidden;
+}
+#content li {
+	float: left;
+	width: 169px;
+	height: 159px;
+	background-color: transparent;
+}
+#content li a {
+	display: block;
+	background-color: transparent;
+	width: 168px;
+	height: 159px;
+}
+#footer p {
+	height: 49px;
+	background: #ab000c url(greatgifts-footer-legal.gif) no-repeat 0 0;
+}
+
+#facebook,
+#twitter,
+#myspace {
+	position: relative;
+	height: 30px;
+	width: 30px;
+}
+#facebook {
+	top: -39px;
+	left:573px;
+}
+#twitter {
+	top: -69px;
+	left:605px;
+}
+#myspace {
+	top: -99px;
+	left:638px;
+}
+
+/* Comming Soon
+ * --------------------------------------------------*/
+
+body.comming-soon #header {
+	margin-top: 40px;
+	height: 224px;
+	background: #ab000c url(greatgifts-header-comingSoon.gif) no-repeat 0 0;
+}
+
+/* Sorry...
+ * --------------------------------------------------*/
+body.sorry #header {
+	height: 261px;
+	background: #ab000c url(greatgifts-header-sorry.gif) no-repeat 0 0;
+}
+body.gsi-sorry #header {
+	height: 261px;
+	background: #ab000c url(greatgifts-header-sorry-gsi.gif) no-repeat 0 0;
+}
+
+body.sorry #content,
+body.gsi-sorry #content {
+	background: #fff url(greatgifts-partners-sprite-sorry.gif) no-repeat 0 0;
+}
+body.sorry #footer,
+body.gsi-sorry #footer {
+	height: 49px;
+	background: #ab000c url(greatgifts-footer.gif) no-repeat 0 0;
+}
+
+
+body.sorry #facebook,
+body.sorry #twitter,
+body.sorry #myspace {
+	visibility: hidden;
+}
+
+body.gsi-sorry #header a#shop {
+	visibility: visible;
+	background: transparent url(none) no-repeat 0 0;
+	width: 677px;
+	height: 260px;
+}
