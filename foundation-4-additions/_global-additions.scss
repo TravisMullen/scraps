@@ -1,0 +1,305 @@
+// =============================================================================
+// GLOBAL styles to be added to
+// `/source/bower_components/foundation/scss/foundation/custom/_global.scss`
+// note: modified `/foundation/compoments/` should be moved to `/foundation/custom/`
+// to keep `/foundation/compoments/` unchanged for easier merges from master foundation repo
+// =============================================================================
+
+$onepixel: emCalc(1); // create EM increment from PX
+// do math to align to other media queries in grid.scss
+// remove 1px from $screen because other grid queries are checking the inverse (no max-width)
+$max-width-medium: ($medium-screen - $onepixel);
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.relative {
+    position: relative;
+}
+.full {
+    width: 100%;
+}
+@media #{$screen} {
+  .left-medium-up {
+    float: none !important;
+  }
+  .right-medium-up {
+    float: none !important;
+    &.inline-list {
+      float: none !important;
+    }
+  }
+  .text-center-medium-up {
+    text-align: left;
+  }
+  .text-center-medium-down {
+    text-align: center;
+  }
+}
+@media #{$medium} {
+  .left-medium-up {
+    float: left !important;
+  }
+  .right-medium-up {
+    float: right !important;
+    &.inline-list {
+      float: right !important;
+    }
+  }
+  .row-small {
+    width: inherit;
+  }
+  .text-center-medium-up {
+    text-align: center;
+  }
+  .text-center-medium-down {
+    text-align: left;
+  }
+}
+
+// color overrides
+.white {
+    color: $white;
+}
+.primary-color {
+    color: $primary-color;
+}
+.primary-accent-color {
+    color: $primary-accent-color;
+}
+.secondary-color {
+    color: $secondary-color;
+}
+.tertiary-color {
+    color: $tertiary-color;
+}
+.info-color {
+    color: $info-color;
+}
+.accent-color {
+    color: $accent-color;
+}
+
+// background colors
+.bg-white {
+    background-color: $white;
+}
+.bg-primary-color {
+    background-color: $primary-color;
+}
+.bg-secondary-color {
+    background-color: $secondary-color;
+}
+.bg-alert-color {
+    background-color: $alert-color;
+}
+.bg-tertiary-color {
+    background-color: $tertiary-color;
+}
+.bg-info-color {
+    background-color: $info-color;
+}
+.bg-panel-color {
+    background-color: $panel-color;
+}
+.bg-banner-color {
+    background-color: $banner-color;
+}
+
+.underline {
+  border-bottom: 1px solid $border-color;
+}
+.overline {
+  border-top: 1px solid $border-color;
+}
+
+// positioning
+$pull-increment: emCalc(25) !default; // add override var to _settings-liveload.scss
+
+// add top spacing
+.pull-down-1,
+.pull-down-1-small-only {
+    margin-top: $pull-increment;
+}
+.pull-down-2,
+.pull-down-2-small-only {
+    margin-top: $pull-increment*2;
+}
+.pull-down-3,
+.pull-down-3-small-only {
+    margin-top: $pull-increment*3;
+}
+.pull-down-4,
+.pull-down-4-small-only {
+    margin-top: $pull-increment*4;
+}
+.pull-down-5,
+.pull-down-5-small-only {
+    margin-top: $pull-increment*5;
+}
+
+@media #{$medium} {
+  .pull-down-1-small-only,
+  .pull-down-2-small-only,
+  .pull-down-3-small-only,
+  .pull-down-4-small-only,
+  .pull-down-5-small-only {
+    margin-top: 0;
+  }
+// subtract top spacing
+  .pull-up-1 {
+      margin-top: -($pull-increment/2); // half of $pull-increment;
+  }
+  .pull-up-2 {
+      margin-top: -($pull-increment); // full $pull-increment;
+  }
+  .pull-up-3 {
+      margin-top: -($pull-increment*1.5); // one and a half of $pull-increment;
+  }
+}
+// subtract top spacing
+.pull-left-1 {
+    margin-right: $pull-increment/2; // half of $pull-increment;
+}
+.pull-left-2 {
+    margin-right: $pull-increment; // full $pull-increment;
+}
+.pull-left-3 {
+    margin-right: $pull-increment*1.5; // one and a half of $pull-increment;
+}
+
+// subtract top spacing
+.pull-right-1 {
+    margin-left: $pull-increment/2; // half of $pull-increment;
+}
+.pull-right-2 {
+    margin-left: $pull-increment; // full $pull-increment;
+}
+.pull-right-3 {
+    margin-left: $pull-increment*1.5; // one and a half of $pull-increment;
+}
+// bottom spacing
+.bottom-gutter-0 {
+    margin-bottom: 0;
+}
+.bottom-gutter-1 {
+    margin-bottom: $pull-increment;
+}
+.bottom-gutter-2 {
+    margin-bottom: $pull-increment*2;
+}
+.bottom-gutter-3 {
+    margin-bottom: $pull-increment*3;
+}
+.bottom-gutter-4 {
+    margin-bottom: $pull-increment*4;
+}
+.bottom-gutter-5 {
+    margin-bottom: $pull-increment*5;
+}
+
+/* pull-down classes: small, meduim and large */
+
+.pull-down-1,
+.small-pull-down-1 {
+    margin-top: $pull-increment;
+}
+.pull-down-2,
+.small-pull-down-2 {
+    margin-top: $pull-increment*2;
+}
+.pull-down-3,
+.small-pull-down-3 {
+    margin-top: $pull-increment*3;
+}
+.pull-down-4,
+.small-pull-down-4 {
+    margin-top: $pull-increment*4;
+}
+
+@media #{$medium} {
+    .small-pull-down-1,
+    .small-pull-down-2,
+    .small-pull-down-3,
+    .small-pull-down-4 {
+        margin-top: 0; // clear small
+    }
+
+    // adding large to medium space to conform with custom grid system
+    // as large will override small in medium space
+    .large-pull-down-1 {
+        margin-top: $pull-increment;
+    }
+    .large-pull-down-2 {
+        margin-top: $pull-increment*2;
+    }
+    .large-pull-down-3 {
+        margin-top: $pull-increment*3;
+    }
+    .large-pull-down-4 {
+        margin-top: $pull-increment*4;
+    }
+
+    .medium-pull-down-1 {
+        margin-top: $pull-increment;
+    }
+    .medium-pull-down-2 {
+        margin-top: $pull-increment*2;
+    }
+    .medium-pull-down-3 {
+        margin-top: $pull-increment*3;
+    }
+    .medium-pull-down-4 {
+        margin-top: $pull-increment*4;
+    }
+    .medium-pull-down-5 {
+        margin-top: $pull-increment*5;
+    }
+}
+
+@media #{$large} {
+    .medium-pull-down-1,
+    .medium-pull-down-2,
+    .medium-pull-down-3,
+    .medium-pull-down-4 {
+        margin-top: 0; //clear medium
+    }
+
+    .large-pull-down-1 {
+        margin-top: $pull-increment;
+    }
+    .large-pull-down-2 {
+        margin-top: $pull-increment*2;
+    }
+    .large-pull-down-3 {
+        margin-top: $pull-increment*3;
+    }
+    .large-pull-down-4 {
+        margin-top: $pull-increment*4;
+    }
+    .large-pull-down-5 {
+        margin-top: $pull-increment*5;
+    }
+}
+
+// image replacement
+.image,
+.screen-reader-text {
+  @include image-replacement;
+}
+.screen-reader-text {
+  height: 0;
+  width: 0;
+}
+
+.radius {
+  @include radius;
+}
+
+// apply row to medium only
+@media only screen and (max-device-width : $medium-screen) {
+  .row-medium {
+    @include grid-row;
+  }
+}

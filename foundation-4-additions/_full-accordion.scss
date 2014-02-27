@@ -1,0 +1,15 @@
+.full-accordion-list {
+  .accordion-trigger {
+    cursor: $cursor-pointer-value;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .icon {
+      font-size: 0.7em;
+      display: inline;
+    }
+  }
+}

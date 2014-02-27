@@ -1,0 +1,58 @@
+.block-grid {
+  li {
+    @include inline;
+  }
+  &.grid-2 {
+    li {
+      width: 45%;
+      margin-right: 4%;
+    }
+  }
+}
+
+.small-accordion-list {
+  .accordion-trigger {
+    .icon {
+      display: none;
+    }
+  }
+  .accordion-large-only {
+      display: block; // DO NOT CHANGE: `.accordion-large-only` used for javascript hook
+  }
+  .accordion-small-only {
+      display: none;
+  }
+}
+
+@media only screen and (max-width : $max-width-medium) {
+  .small-accordion-list {
+    &.block-grid {
+      &.grid-2 {
+        li {
+          width: 96%;
+        }
+      }
+    }
+    .accordion-large-only {
+        display: none; // DO NOT CHANGE: `.accordion-large-only` used for javascript hook
+    }
+    .accordion-small-only {
+        display: block;
+    }
+    .accordion-trigger {
+      cursor: $cursor-pointer-value;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      .icon {
+        display: inline;
+      }
+    }
+    .accordion-content {
+      display: none;
+    }
+  }
+}

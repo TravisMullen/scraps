@@ -1,0 +1,23 @@
+.drop-down-widget {
+  .show-trigger {
+    cursor: $cursor-pointer-value;
+    &:hover {
+      background-color: darken($tertiary-color, $button-function-factor);
+    }
+  }
+  .show-content {
+      display: none;
+      z-index: 100;
+  }
+  .panel {
+    padding-bottom: 0;
+  }
+  &.show-content-active {
+    // .show-content
+    //     display: block;
+    // }
+    .panel {
+      padding-bottom: $panel-padding;
+    }
+  }
+}
