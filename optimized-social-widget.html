@@ -1,0 +1,181 @@
+<!doctype>
+<html dir="ltr" lang="en-US">
+<head>
+		<meta charset="utf-8">
+		<meta name="description" content="" />
+		<meta name="keywords" content="">
+		<meta name="robots" content="no index,no follow">
+		<meta name="viewport" content="width=850">
+
+		<title>
+			
+		</title>
+		
+		<link rel="icon" href="images/icon/tm-icon.gif"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<!--[if IE]>	
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+		<div id="wrapper">
+			<header>
+				Testing
+			</header>
+			<article>
+				<section>
+						
+		<div id="main-content">
+		
+			<h1 id="world-awaits">A World of Coffee Awaits</h1>
+			<div id="promo-send">
+				<a href="" id="share-email" title="email friends and family">email</a>
+				<!--<a href="" id="share-twitter" title="share on Twitter">Twitter</a>
+				<a href="" id="share-pinterest" title="share on Pinterest">Pinterest</a>-->			
+				<!--<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://trueaction.com" data-text="Promo One" data-count="none">Tweet</a>
+				<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Ftrueaction.com&media=http%3A%2F%2Fstatic.trueaction.com%2Fimages%2Ftan.jpg&description=TrueAction%20Network" class="pin-it-button" id="share-pinterest" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>-->
+			</div>
+						<div id="promo-wrap">
+				<div id="promo" class="promo-one"><a href="http://www.gevalia.com/" target="_blank" title="Shop for Gevalia Coffee">Shop for Gevalia Coffee</a></div>
+			</div>
+			<ul id="promo-options">
+				<li class="promo-one"><a href="http://www.gevalia.com/coffee/coffee,default,sc.html?cm_mmc=Facebook-_-EO%20Tab-_-20121005-_-Gevalia.com%20CoffeePage%20OctoberEO&socid=FBG_EO_Tab_Oct" target="_blank">I recommend this exclusive offer from Gevalia</a></li>
+				<li class="promo-two"><a href="http://www.gevalia.com/pecan-torte/8424,default,pd.html?cm_mmc=Facebook-_-EO%20Tab-_-20121005-_-Gevalia.com%20PecanTorte%20COTM&socid=COTM_FB_OCT" target="_blank">Coffee of the Month</a></li>
+				<li class="promo-three"><a href="http://refer.gevalia.com/m/982261920?cm_mmc=Extole-_-RAF-_-landingpage-_-coffee&socid=FBG_EO_Tab" target="_blank">Thought you might be interested in this Gevalia offer</a></li>
+				<li class="promo-four no-share"><a href="https://www.facebook.com/questions/10150979980526524/" target="_blank">Take this Gevalia poll</a></li>
+				</ul>
+			
+			
+		</div><!-- main-content -->
+		
+
+				
+				</section>
+			</article>
+			<footer>
+				
+				<a href="mailto:travis@travismullen.com" title="mail">
+					travis@travismullen.com
+				</a>
+		
+			</footer>
+		</div>
+<!-- end of wrapper... and im out -->
+<script>
+
+	(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=286808998080270";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		
+			var fanGate = true;
+        	var tURL = 'https://www.facebook.com/GevaliaCoffee';
+
+			function extractUrl(input) {
+			 // remove quotes and wrapping url()
+			 return input.replace(/"/g,"").replace(/url\(|\)$/ig, "");
+			}
+			var activeElem = "";
+			function socialWidgetInit(promoURL,promoMsg,promoImg,activeElem) {
+			
+				var twitterButton = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="'+promoURL+'" data-text="'+promoMsg+'" data-count="none">Tweet</a>';						   
+				
+        		var promoURLtest = promoURL;
+        		promoURL = escape(promoURL);
+        		promoURL = promoURL.replace(/\//g,"%2F");   
+        		promoMsg = escape(promoMsg);	
+        		
+        		var mailToURL = "mailto:?subject="+promoMsg+"&body="+promoURL;        		
+        		//var mailToURL = "mailto:?subject="+promoMsg+"&body=%3Ca%20href%3D%22"+promoURL+"%22%3E"+promoMsg+"%3C/a%3E";
+        		$("#share-email").attr("href",mailToURL);	
+        		
+				var pinterestButton = '<iframe scrolling="no" frameborder="0" src="https://assets.pinterest.com/pinit.html?url='+promoURL+'&amp;media='+promoImg+'&amp;description='+promoMsg+'&amp;layout=none" style="border: medium none; width: 90px; height: 20px;"></iframe>'; 
+				
+				
+        		$("#promo-send").fadeOut(200, function(){
+        		
+					//remove fb button
+					$('div.fb-like').remove();
+					//remove pinterest and twitter buttons
+					$('#promo-send iframe').remove();	
+					//add fresh buttons						
+					$('#promo-send').append(twitterButton);
+					$('#promo-send').append(pinterestButton);
+					
+					//dont show for FB polls ("no-share" class)
+					if (!$(activeElem).parent("li").hasClass("no-share")) {
+						$('#promo-send').prepend('<div class="fb-like" data-send="true" data-width="400" data-show-faces="false" data-layout="button_count" id="promo-send-button" data-href="' + promoURL + '"></div>');
+						//reinitialize FB widget after DOM change
+						if(typeof(FB) !== 'undefined') {
+							FB.XFBML.parse(document.getElementById('promo-send'));				}
+					}
+					
+						
+					//reinitialize TWTTR widget after DOM change
+					if (typeof (twttr) != 'undefined') {
+			            twttr.widgets.load();
+			        }
+			        
+				}).fadeIn(1000);
+
+			}
+			
+        	function activeLike(speed) {
+        		var firstPromo = $("#promo").attr("class");
+        		$("#promo-options li."+firstPromo+" a").addClass("active");
+        		var firstPromoURL = $("#promo-options li."+firstPromo+" a").attr("href");
+        		var firstPromoMsg = $("#promo-options li."+firstPromo+" a").html();
+        		var firstPromoImg = extractUrl($("#promo-options li."+firstPromo+" a").css("background-image"));
+        		
+        		$("#promo a").attr("href",firstPromoURL).attr("title",firstPromoMsg).html(firstPromoMsg);
+        		        		
+				socialWidgetInit(firstPromoURL,firstPromoMsg,firstPromoImg,activeElem);
+					
+				$("body").removeClass("splash");
+				$("#intro-message").fadeOut(speed);
+				$("#main-content").fadeIn(speed);
+			}
+
+			function inactiveLike(speed) {
+				$("body").addClass("splash");
+				$("#main-content").fadeOut(speed);
+				$("#intro-message").fadeIn(speed);
+			}
+			
+          $("#promo-options li a").bind('click', function(){         
+				var promoImage = $(this).parent("li").attr("class");
+        		$("#promo").fadeOut(200, function(){
+					$("#promo").attr("class",promoImage);
+				}).fadeIn(1000);
+ 	
+        		var activePromoURL = $(this).attr("href");
+        		var activePromoMsg = $(this).html();	
+        		var activePromoImg = extractUrl($(this).css("background-image"));	
+        		$("#promo a").attr("href",activePromoURL).attr("title",activePromoMsg).html(activePromoMsg);
+        		
+          		$("#promo-options li a.active").removeClass("active");
+				$(this).addClass("active");
+				activeElem = $(this);
+				socialWidgetInit(activePromoURL,activePromoMsg,activePromoImg,activeElem);
+        		
+								
+				
+    			return false;
+			});
+			
+			activeLike(2000);
+
+</script>
+
+
+</body>
+</html>
+
+
+			
+

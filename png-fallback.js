@@ -1,6 +1,6 @@
-var Ditech = Ditech || {};
+var NameSpace = NameSpace || {};
 
-Ditech.pngFallback = {
+NameSpace.pngFallback = {
     init: function() {
         this.$images = $("body img"); // reduce scope to `body`
         this.detectSupport();
@@ -27,4 +27,4 @@ Ditech.pngFallback = {
     }
 };
 
-Ditech.pngFallback.init(); // `init` PNG fallback
+NameSpace.pngFallback.init(); // `init` PNG fallback
