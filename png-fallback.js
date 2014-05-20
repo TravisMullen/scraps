@@ -2,7 +2,7 @@ var App = App || {};
 
 App.pngFallback = {
     init: function() {
-        this.$images = $("body img"); // reduce scope to `body`
+        this.$images = $("img"); // find images
         this.detectSupport();
     },
     replaceSVG: function() {
