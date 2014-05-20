@@ -1,6 +1,6 @@
-var NameSpace = NameSpace || {};
+var App = App || {};
 
-NameSpace.pngFallback = {
+App.pngFallback = {
     init: function() {
         this.$images = $("body img"); // reduce scope to `body`
         this.detectSupport();
@@ -27,4 +27,4 @@ NameSpace.pngFallback = {
     }
 };
 
-NameSpace.pngFallback.init(); // `init` PNG fallback
+App.pngFallback.init(); // `init` PNG fallback
